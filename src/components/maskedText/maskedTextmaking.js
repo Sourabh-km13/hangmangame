@@ -1,5 +1,5 @@
 export function MaskedTextmaking(orignalWord , guessedLetters) {
-    console.log('gsl2',guessedLetters);
+    
     
     guessedLetters=guessedLetters.map(char=>char.toUpperCase()
     )

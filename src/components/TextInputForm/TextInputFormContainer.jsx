@@ -6,7 +6,7 @@ function TextInputFormContainer() {
 
     const [inputType, setInputType] = useState("password");
     const [value, setValue] = useState("");
-
+    const [hint, setHint] = useState('')
     const navigate = useNavigate(); // useNavigate is a hook that returns a navigate function
 
     function handleFormSubmit(event) {
@@ -14,16 +14,17 @@ function TextInputFormContainer() {
         console.log("Form submitted", value);
         if(value) {
             // if we have something in value then we want to go to the play page
-            navigate('/play',{state:{value}});
+            navigate('/play',{state:{value,hint}});
         }
     }
 
     function handleTextInputChange(event) {
-        console.log("Text input changed");
-        console.log(event.target.value);
+        
         setValue(event.target.value);
     }
-
+    function handleHintInputChange(event){
+        setHint(event.target.value)
+    }
     function handleShowHideClick() {
         console.log("Show/Hide button clicked");
         if (inputType === "password") {
@@ -41,6 +42,7 @@ function TextInputFormContainer() {
             handleFormSubmit={handleFormSubmit} 
             handleTextInputChange={handleTextInputChange} 
             handleShowHideClick={handleShowHideClick}
+            handleHintInputChange={handleHintInputChange}
         />
     );
 }

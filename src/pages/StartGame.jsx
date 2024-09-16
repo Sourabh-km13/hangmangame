@@ -1,12 +1,12 @@
-import { Link } from "react-router-dom";
+
 import TextInputFormContainer from "../components/TextInputForm/TextInputFormContainer";
 
 function StartGame() {
     return (
         <>
-            <h1>Start Game</h1>
+            <h1 className="text-white my-2 text-xl text-center">Start Game</h1>
             <TextInputFormContainer />
-            <Link to='/play'  className="text-blue-400">Play Game Link</Link>
+           
         </>
     )
 }
