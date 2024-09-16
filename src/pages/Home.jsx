@@ -11,12 +11,12 @@ export default function Home() {
   }, [])
   
   async function Giveword() {
-     const a= await fetch('http://localhost:3000/wordLet');
+     const a= await fetch('https://sourabh-km13.github.io/Wordlet/Words.json');
      const response= await a.json()
      console.log(response);
      const randno=Math.floor(Math.random()*20)
-     setRandomword (response[randno].word)
-     setRandomhint(response[randno].hint)
+     setRandomword (response.wordLet[randno].word)
+     setRandomhint(response.wordLet[randno].hint)
   }
 
   return (
