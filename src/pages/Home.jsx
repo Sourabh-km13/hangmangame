@@ -14,7 +14,7 @@ export default function Home() {
      const a= await fetch('https://sourabh-km13.github.io/Wordlet/Words.json');
      const response= await a.json()
      console.log(response);
-     const randno=Math.floor(Math.random()*20)
+     const randno=Math.floor(Math.random()*50)
      setRandomword (response.wordLet[randno].word)
      setRandomhint(response.wordLet[randno].hint)
   }
