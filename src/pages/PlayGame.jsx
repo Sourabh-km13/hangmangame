@@ -31,14 +31,14 @@ function PlayGame() {
    
    
    return (
-        <>
+        <div className="px-10 py-5">
             
             <Maskedtext
             orignalWord={word}
             guessedletters={guessedLetters}
             hint={hint}
             />
-            <br />
+            
           <div>
             <Keyboard
             guessedword={guessedLetters}
@@ -48,7 +48,7 @@ function PlayGame() {
             <Hangman step={step} orignalWord={word}/>
           </div>
             <Link to='/'  className="text-blue-400">Start Again</Link>
-        </>
+        </div>
     );
 }
 

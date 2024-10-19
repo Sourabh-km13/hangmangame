@@ -1,4 +1,4 @@
-const characters='QWERTYUIOPASDFGHJKLZXCVBNM'.split('')
+const characters='ABCDEFGHIJKLMNOPQRSTUVWXYZ'.split('')
 function Keyboard({guessedword,orignalword,onletterclick}) {
     const originalLetters = new Set(orignalword.toUpperCase().split(''));
     const guessedLettersSet = new Set(guessedword);
@@ -28,9 +28,9 @@ function Keyboard({guessedword,orignalword,onletterclick}) {
         )
     })
     return(
-        <>
+        <div className="w-1/2 my-6">
         {buttons}
-        </>
+        </div>
     )
 }
 export default Keyboard

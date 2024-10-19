@@ -1,4 +1,4 @@
-import {useNavigate } from "react-router-dom";
+
 import level1 from "../../assets/images/image1.svg";
 import level2 from "../../assets/images/image2.svg";
 import level3 from "../../assets/images/image3.svg";
@@ -13,8 +13,8 @@ export function Hangman({step,orignalWord}) {
     
     return (
         <>
-            <div className="w-[300px] h-[300px]">
-                <img src={step>=images.length?level7:images[step]} alt="" />
+            <div className="w-[300px] h-[300px] ">
+                <img src={step>=images.length?level7:images[step]} className="rounded-xl border-2 border-blue-500" alt="" />
             </div>
 
         </>
